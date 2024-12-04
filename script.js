@@ -15,3 +15,17 @@ function initialGrid() {
 }
 
 initialGrid();
+
+function userGrid() {
+    box.remove();
+    const userInput = document.querySelector("#choice");
+    let i = userInput;
+    if (i < userInput && i <= 100) {
+        const newDiv = document.createElement("div");
+        divContainer.appendChild(newDiv);
+        newDiv.id = "box";
+        i ++;
+    } else if (i > 100) {
+        break
+    }
+}
