@@ -26,7 +26,7 @@ function userGrid() {
         newDiv.id = "box";
         i ++;
     } else if (i > 100) {
-        break
+        return null;
     }
 }
 
