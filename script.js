@@ -29,3 +29,8 @@ function userGrid() {
         break
     }
 }
+
+const formSubmit = document.querySelector("#subBtn");
+formSubmit.addEventListener("click", () => {
+    userGrid()
+});
