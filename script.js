@@ -6,10 +6,10 @@ function initialGrid() {
         const newDiv = document.createElement("div");
         divContainer.appendChild(newDiv);
         newDiv.id = "box";
-        newDiv.style.minWidth = "246px";
-        newDiv.style.maxWidth = "246px";
-        newDiv.style.minHeight = "246px";
-        newDiv.style.maxHeight = "246px";
+        newDiv.style.minWidth = "251px";
+        newDiv.style.maxWidth = "251px";
+        newDiv.style.minHeight = "251px";
+        newDiv.style.maxHeight = "251px";
         i ++;
     }
 }
