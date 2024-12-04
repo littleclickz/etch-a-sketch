@@ -18,7 +18,7 @@ initialGrid();
 
 function userGrid() {
     box.remove();
-    const userInput = document.querySelector("#choice");
+    const userInput = document.getElementById("choice").value;
     let i = userInput;
     if (i < userInput && i <= 100) {
         const newDiv = document.createElement("div");
