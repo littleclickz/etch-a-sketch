@@ -17,7 +17,8 @@ function initialGrid() {
 initialGrid();
 
 function userGrid() {
-    box.remove();
+    const originalGrid = document.getElementById("box");
+    originalGrid.remove();
     const userInput = document.getElementById("choice").value;
     let i = userInput;
     if (i < userInput && i <= 100) {
@@ -32,5 +33,15 @@ function userGrid() {
 
 const formSubmit = document.querySelector("#subBtn");
 formSubmit.addEventListener("click", () => {
-    userGrid()
+    userGrid();
 });
+
+const grid = document.querySelector("#newDiv");
+newDiv.addEventListener("mouseover", () => {
+    newDiv.style.backgroundColor = "lavender";
+});
+
+const eraser = document.querySelector("#eraser");
+eraser.addEventListener("click", () => {
+    newDiv.style.backgroundColor = "white";
+})
