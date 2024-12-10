@@ -36,7 +36,7 @@ formSubmit.addEventListener("click", () => {
     userGrid();
 });
 
-const grid = document.querySelector("#newDiv");
+const newDiv = document.getElementById("box");
 newDiv.addEventListener("mouseover", () => {
     newDiv.style.backgroundColor = "lavender";
 });
