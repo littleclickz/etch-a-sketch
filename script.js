@@ -5,7 +5,7 @@ function initialGrid() {
     while (i < 16) {
         const newDiv = document.createElement("div");
         divContainer.appendChild(newDiv);
-        newDiv.id = "box";
+        newDiv.className = "box";
         newDiv.style.minWidth = "251px";
         newDiv.style.maxWidth = "251px";
         newDiv.style.minHeight = "251px";
@@ -17,14 +17,14 @@ function initialGrid() {
 initialGrid();
 
 function userGrid() {
-    const originalGrid = document.getElementById("box");
+    const originalGrid = document.getElementByClass("box");
     originalGrid.remove();
     const userInput = document.getElementById("choice").value;
     let i = userInput;
     if (i < userInput && i <= 100) {
         const newDiv = document.createElement("div");
         divContainer.appendChild(newDiv);
-        newDiv.id = "box";
+        newDiv.className = "box";
         i ++;
     } else if (i > 100) {
         return null;
@@ -36,12 +36,12 @@ formSubmit.addEventListener("click", () => {
     userGrid();
 });
 
-const newDiv = document.getElementById("box");
-newDiv.addEventListener("mouseover", () => {
-    newDiv.style.backgroundColor = "lavender";
+const highlightedDiv = document.getElementsByClassName("box");
+highlightedDiv.addEventListener("mouseover", () => {
+    highlightedDiv.style.backgroundColor = "lavender";
 });
 
 const eraser = document.querySelector("#eraser");
 eraser.addEventListener("click", () => {
-    newDiv.style.backgroundColor = "white";
+    highlightedDiv.style.backgroundColor = "white";
 })
