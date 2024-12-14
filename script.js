@@ -10,6 +10,9 @@ function initialGrid() {
         newDiv.style.maxWidth = "251px";
         newDiv.style.minHeight = "251px";
         newDiv.style.maxHeight = "251px";
+        newDiv.addEventListener("mouseover", () => {
+            newDiv.style.backgroundColor = "lavender";
+        });
         i ++;
     }
 }
@@ -17,7 +20,7 @@ function initialGrid() {
 initialGrid();
 
 function userGrid() {
-    const originalGrid = document.getElementByClass("box");
+    const originalGrid = document.getElementsByClassName("box");
     originalGrid.remove();
     const userInput = document.getElementById("choice").value;
     let i = userInput;
@@ -25,6 +28,9 @@ function userGrid() {
         const newDiv = document.createElement("div");
         divContainer.appendChild(newDiv);
         newDiv.className = "box";
+        newDiv.addEventListener("mouseover", () => {
+            newDiv.style.backgroundColor = "lavender";
+        });
         i ++;
     } else if (i > 100) {
         return null;
@@ -34,11 +40,6 @@ function userGrid() {
 const formSubmit = document.querySelector("#subBtn");
 formSubmit.addEventListener("click", () => {
     userGrid();
-});
-
-const highlightedDiv = document.getElementsByClassName("box");
-highlightedDiv.addEventListener("mouseover", () => {
-    highlightedDiv.style.backgroundColor = "lavender";
 });
 
 const eraser = document.querySelector("#eraser");
