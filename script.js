@@ -23,8 +23,8 @@ function userGrid() {
     const originalGrid = document.getElementsByClassName("box");
     originalGrid.remove();
     const userInput = document.getElementById("choice").value;
-    let i = userInput;
-    if (i < userInput && i <= 100) {
+    let i = 0;
+    while (i < userInput && i <= 100) {
         const newDiv = document.createElement("div");
         divContainer.appendChild(newDiv);
         newDiv.className = "box";
@@ -32,8 +32,6 @@ function userGrid() {
             newDiv.style.backgroundColor = "lavender";
         });
         i ++;
-    } else if (i > 100) {
-        return null;
     }
 }
 
