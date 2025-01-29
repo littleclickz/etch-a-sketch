@@ -13,6 +13,9 @@ function initialGrid() {
         newDiv.addEventListener("mouseover", () => {
             newDiv.style.backgroundColor = "lavender";
         });
+        newDiv.addEventListener("click", () => {
+            newDiv.style.backgroundColor = "white";
+        });
         i ++;
     }
 }
@@ -39,8 +42,3 @@ const formSubmit = document.querySelector("#subBtn");
 formSubmit.addEventListener("click", () => {
     userGrid();
 });
-
-const eraser = document.querySelector("#eraser");
-eraser.addEventListener("click", () => {
-    highlightedDiv.style.backgroundColor = "white";
-})
