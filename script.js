@@ -33,12 +33,12 @@ function userGrid() {
     while (i < gridSize && gridSize <= 100) {
       const newDiv = document.createElement("div");
       divContainer.appendChild(newDiv);
-      newDiv.className = "box";
-      const calculatedSize = calc(1024 / gridSize);
-      newDiv.style.minWidth = calculatedSize;
-      newDiv.style.maxWidth = calculatedSize;
-      newDiv.style.minHeight = calculatedSize;
-      newDiv.style.maxHeight = calculatedSize;
+      newDiv.className = "userBox";
+      const stylesheet = document.styleSheets[0];
+      stylesheet.insertRule("#userBox { min-width: calc(1024 / gridSize) }", 0);
+      stylesheet.insertRule("#userBox { max-width: calc(1024 / gridSize) }", 0);
+      stylesheet.insertRule("#userBox { min-height: calc(1024 / gridSize) }", 0);
+      stylesheet.insertRule("#userBox { max-height: calc(1024 / gridSize) }", 0);
       newDiv.addEventListener("mouseover", () => {
         newDiv.style.backgroundColor = "lavender";
       });
