@@ -24,8 +24,8 @@ initialGrid();
 
 function userGrid() {
     const originalGrid = document.getElementsByClassName("box");
-    originalGrid.forEach((cell) => {
-       originalGrid.splice(0, 1);
+    Array.from(originalGrid).forEach((cell) => {
+       Array.from(originalGrid).splice(0, 1);
     });
     const userInput = document.getElementById("choice");
     const gridSize = userInput.value;
