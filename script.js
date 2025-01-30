@@ -1,4 +1,4 @@
-const divContainer = document.querySelector("#container"); // defines our grid container//
+const divContainer = document.querySelector("#container");
 
 function initialGrid() {
     let i = 0;
@@ -24,31 +24,30 @@ initialGrid();
 
 function userGrid() {
     const originalGrid = document.getElementsByClassName("box");
-    Array.from(originalGrid).forEach(cell => {
-        Array.from(originalGrid).splice(0, 1);
+    originalGrid.forEach((cell) => {
+       originalGrid.splice(0, 1);
     });
     const userInput = document.getElementById("choice");
     const gridSize = userInput.value;
     let i = 0;
     while (i < gridSize && gridSize <= 100) {
-      const newDiv = document.createElement("div"); //ripped from initialGrid() so we know it works
-      divContainer.appendChild(newDiv); //ripped from initialGrid() so we know it works
-      newDiv.className = "box"; //ripped from initialGrid() so we know it works
-      newDiv.style.minWidth = calc(1024 / gridSize);
-      newDiv.style.maxWidth = calc(1024 / gridSize);
-      newDiv.style.minHeight = calc(1024 / gridSize);
-      newDiv.style.maxHeight = calc(1024 / gridSize);
-      newDiv.addEventListener("mouseover", () => { //ripped from initialGrid() so we know it works
+      const newDiv = document.createElement("div");
+      divContainer.appendChild(newDiv);
+      newDiv.className = "box";
+      const calculatedSize = calc(1024 / gridSize);
+      newDiv.style.minWidth = calculatedSize;
+      newDiv.style.maxWidth = calculatedSize;
+      newDiv.style.minHeight = calculatedSize;
+      newDiv.style.maxHeight = calculatedSize;
+      newDiv.addEventListener("mouseover", () => {
         newDiv.style.backgroundColor = "lavender";
       });
-      newDiv.addEventListener("click", () => { //ripped from initialGrid() so we know it works
+      newDiv.addEventListener("click", () => {
           newDiv.style.backgroundColor = "white";
       });
       i ++;
     }
 }
-
-//everything below this line works!
 
 const formSubmit = document.querySelector("#subBtn");
 formSubmit.addEventListener("click", () => {
