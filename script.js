@@ -22,13 +22,13 @@ function initialGrid() {
 
 initialGrid();
 
-//everything above this line works! next: focus on figuring out how to remove original grid
-//(something to do with .getElementsByClassName returning an array, so you have to loop through the array
-//and delete each array item)
+//everything above this line works! now: test code for removing original grid
 
 function userGrid() {
     const originalGrid = document.getElementsByClassName("box");
-    originalGrid.remove();
+    originalGrid.forEach((cell) => {
+       originalGrid.splice(0, 1);
+    });
     //const userInput = document.getElementById("choice").value;
     //let i = 0;
     //while (i < userInput && i <= 100) {
