@@ -34,10 +34,10 @@ function userGrid() {
       const newDiv = document.createElement("div"); //ripped from initialGrid() so we know it works
       divContainer.appendChild(newDiv); //ripped from initialGrid() so we know it works
       newDiv.className = "box"; //ripped from initialGrid() so we know it works
-      newDiv.style.minWidth = "251px";
-      newDiv.style.maxWidth = "251px"
-      newDiv.style.minHeight = "251px";
-      newDiv.style.maxHeight = "251px";
+      newDiv.style.minWidth = calc(1024 / gridSize);
+      newDiv.style.maxWidth = calc(1024 / gridSize);
+      newDiv.style.minHeight = calc(1024 / gridSize);
+      newDiv.style.maxHeight = calc(1024 / gridSize);
       newDiv.addEventListener("mouseover", () => { //ripped from initialGrid() so we know it works
         newDiv.style.backgroundColor = "lavender";
       });
