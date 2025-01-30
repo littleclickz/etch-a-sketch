@@ -22,24 +22,23 @@ function initialGrid() {
 
 initialGrid();
 
-//everything above this line works! now: test code for removing original grid
-
 function userGrid() {
     const originalGrid = document.getElementsByClassName("box");
-    originalGrid.forEach((cell) => {
-       originalGrid.splice(0, 1);
+    Array.from(originalGrid).forEach(cell => {
+        Array.from(originalGrid).splice(0, 1);
     });
-    //const userInput = document.getElementById("choice").value;
-    //let i = 0;
-    //while (i < userInput && i <= 100) {
-        //const newDiv = document.createElement("div");
-        //divContainer.appendChild(newDiv);
-        //newDiv.className = "box";
-        //newDiv.addEventListener("mouseover", () => {
-            //newDiv.style.backgroundColor = "lavender";
-        //});
-        //i ++;
-    //}
+    const userInput = document.getElementById("choice");
+    const gridSize = userInput.value;
+    let i = 0;
+    while (i < gridSize && i <= 100) {
+        const newDiv = document.createElement("div");
+        divContainer.appendChild(newDiv);
+        newDiv.className = "box";
+        newDiv.addEventListener("mouseover", () => {
+            newDiv.style.backgroundColor = "lavender";
+        });
+        i ++;
+    }
 }
 
 //everything below this line works!
