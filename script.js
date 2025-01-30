@@ -30,14 +30,21 @@ function userGrid() {
     const userInput = document.getElementById("choice");
     const gridSize = userInput.value;
     let i = 0;
-    while (i < gridSize && i <= 100) {
-        const newDiv = document.createElement("div");
-        divContainer.appendChild(newDiv);
-        newDiv.className = "box";
-        newDiv.addEventListener("mouseover", () => {
-            newDiv.style.backgroundColor = "lavender";
-        });
-        i ++;
+    while (i < gridSize && gridSize <= 100) {
+      const newDiv = document.createElement("div"); //ripped from initialGrid() so we know it works
+      divContainer.appendChild(newDiv); //ripped from initialGrid() so we know it works
+      newDiv.className = "box"; //ripped from initialGrid() so we know it works
+      newDiv.style.minWidth = "251px";
+      newDiv.style.maxWidth = "251px"
+      newDiv.style.minHeight = "251px";
+      newDiv.style.maxHeight = "251px";
+      newDiv.addEventListener("mouseover", () => { //ripped from initialGrid() so we know it works
+        newDiv.style.backgroundColor = "lavender";
+      });
+      newDiv.addEventListener("click", () => { //ripped from initialGrid() so we know it works
+          newDiv.style.backgroundColor = "white";
+      });
+      i ++;
     }
 }
 
