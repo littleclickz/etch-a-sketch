@@ -24,21 +24,22 @@ initialGrid();
 
 function userGrid() {
     const originalGrid = document.getElementsByClassName("box");
-    Array.from(originalGrid).forEach((cell) => {
+    Array.from(originalGrid).forEach(() => {
        Array.from(originalGrid).splice(0, 1);
     });
     const userInput = document.getElementById("choice");
     const gridSize = userInput.value;
+    const cellNumber = gridSize * gridSize;
+    const cellSize = 1024 / gridSize;
     let i = 0;
-    while (i < gridSize && gridSize <= 100) {
+    while (i < cellNumber && cellNumber <= 100) {
       const newDiv = document.createElement("div");
       divContainer.appendChild(newDiv);
       newDiv.className = "userBox";
-      const stylesheet = document.styleSheets[0];
-      stylesheet.insertRule("#userBox { min-width: calc(1024 / gridSize) }", 0);
-      stylesheet.insertRule("#userBox { max-width: calc(1024 / gridSize) }", 0);
-      stylesheet.insertRule("#userBox { min-height: calc(1024 / gridSize) }", 0);
-      stylesheet.insertRule("#userBox { max-height: calc(1024 / gridSize) }", 0);
+      newDiv.style.minWidth = `${cellSize}px`;
+      newDiv.style.maxWidth = `${cellSize}px`;
+      newDiv.style.minHeight = `${cellSize}px`;
+      newDiv.style.maxHeight = `${cellSize}px`;
       newDiv.addEventListener("mouseover", () => {
         newDiv.style.backgroundColor = "lavender";
       });
