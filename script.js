@@ -11,7 +11,7 @@ function initialGrid() {
         newDiv.style.minHeight = "251px";
         newDiv.style.maxHeight = "251px";
         newDiv.addEventListener("mouseover", () => {
-            newDiv.style.backgroundColor = "lavender";
+            newDiv.style.backgroundColor = "black";
         });
         newDiv.addEventListener("click", () => {
             newDiv.style.backgroundColor = "white";
@@ -42,7 +42,7 @@ function userGrid() {
       newDiv.style.minHeight = `${cellSize}px`;
       newDiv.style.maxHeight = `${cellSize}px`;
       newDiv.addEventListener("mouseover", () => {
-        newDiv.style.backgroundColor = "lavender";
+        newDiv.style.backgroundColor = "black";
       });
       newDiv.addEventListener("click", () => {
           newDiv.style.backgroundColor = "white";
