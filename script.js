@@ -33,7 +33,7 @@ function userGrid() {
     const cellSize = 1024 / gridSize;
     let cellNumber = gridSize * gridSize;
     let i = 0;
-    while (i < cellNumber && cellNumber <= 100) {
+    while (i < cellNumber && gridSize <= 100) {
       const newDiv = document.createElement("div");
       divContainer.appendChild(newDiv);
       newDiv.className = "box";
