@@ -1,18 +1,20 @@
 #container {
-    min-width: 1024px;
-    max-width: 1024px;
-    min-height: 1024px;
-    max-height: 1024px;
+    min-width: 696px;
+    max-width: 696px;
+    min-height: 696px;
+    max-height: 696px;
     background: white;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .box {
     border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
     border-color: black;
     background-color: white;
     flex: 1;
-    margin: -5px;
+    margin: -2px;
 }

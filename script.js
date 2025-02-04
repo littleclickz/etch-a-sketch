@@ -6,10 +6,10 @@ function initialGrid() {
         const newDiv = document.createElement("div");
         divContainer.appendChild(newDiv);
         newDiv.className = "box";
-        newDiv.style.minWidth = "251px";
-        newDiv.style.maxWidth = "251px";
-        newDiv.style.minHeight = "251px";
-        newDiv.style.maxHeight = "251px";
+        newDiv.style.minWidth = "174px";
+        newDiv.style.maxWidth = "174px";
+        newDiv.style.minHeight = "174px";
+        newDiv.style.maxHeight = "174px";
         newDiv.addEventListener("mouseover", () => {
             newDiv.style.backgroundColor = "black";
         });
@@ -30,7 +30,7 @@ function clearGrid() {
 function userGrid() {
     const userInput = document.getElementById("choice");
     const gridSize = userInput.value;
-    const cellSize = 1024 / gridSize;
+    const cellSize = 696 / gridSize;
     let cellNumber = gridSize * gridSize;
     let i = 0;
     while (i < cellNumber && gridSize <= 100) {
